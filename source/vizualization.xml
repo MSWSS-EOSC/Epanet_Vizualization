@@ -1,0 +1,20 @@
+<tool id="epanet2_vizualization" name="EPANET 2" version="0.0.2">
+  <description>vizualization</description>
+  <command>
+    python '$__tool_directory__/trace.py' '$input_file' '$input_node' '$output'
+    mv '$output' '$output'+'.dat'
+  </command>
+  <inputs>
+    <param name="input_file" format="txt" type="data" label="Input file" help="Input text file"/>
+    <param name="input_node" type="text" value="" label="Input node" help="Input node"/>
+  </inputs>
+
+  <outputs>
+    <data format="gif" name="output" />
+  </outputs>
+
+  <help>
+    Export the animated gif file with 48 hours spreading of toxic materials from selected node
+  </help>
+
+</tool>
